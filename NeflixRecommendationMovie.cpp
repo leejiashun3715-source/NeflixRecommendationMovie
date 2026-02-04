@@ -60,10 +60,15 @@ int selectMood() {
     return choice;
 }
 
+//Part2: Recommendation Logic (switch-case AND if-else)
 void recommend(){
     cout << "\n=========================================\n";
     cout << "        NETFLIX RECOMMENDATION\n";
     cout << "=========================================\n\n";
+
+    if(type == 1){
+        cout << "Category: MOVIES\n\n";
+    }
 }
 
 int main(){
