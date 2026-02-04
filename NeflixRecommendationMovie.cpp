@@ -61,13 +61,56 @@ int selectMood() {
 }
 
 //Part2: Recommendation Logic (switch-case AND if-else)
-void recommend(){
+void recommend(int type, int genre, int mood){
     cout << "\n=========================================\n";
     cout << "        NETFLIX RECOMMENDATION\n";
     cout << "=========================================\n\n";
 
-    if(type == 1){
+    if(type == 1){ //TV Movies
         cout << "Category: MOVIES\n\n";
+        switch (genre) {
+            case 1:
+                cout << (mood == 2 ? " EXTRACTION\n JOHN WICK\n"
+                                   : " THE OLD GUARD\n MAD MAX\n");
+                break;
+            
+            case 2:
+                cout << (mood == 1 ? " THE ADAM PROJECT\n RED NOTICE\n"
+                                   : " JUMANJI\n FREE GUY\n");
+                break;
+            
+            case 3:
+                cout << (mood == 3 ? " THE THEORY OF EVERYTHING\n A BEAUTIFUL MIND\n"
+                                   : " THE IRISHMAN\n FORREST GUMP\n");
+                break;
+
+            case 4:
+                cout << " THE CONJURING\n A QUIET PLACE\n";
+                break;
+
+            case 5:
+                cout << " INTERSTELLAR\n INCEPTION\n";
+                break;
+        }
+    }else { //TV Shows
+        cout << " Category: TV SHOWS\n\n";
+        switch (genre) {
+            case 1:
+                cout << " THE NIGHT AGENT\n JACK RYAN\n";
+                break;
+            case 2:
+                cout << " BROOKLYN NINE-NINE\n THE GOOD PLACE\n";
+                break;
+            case 3:
+                cout << " BREAKING BAD\n THE CROWN\n";
+                break;
+            case 4:
+                cout << " THE HAUNTING OF HILL HOUSE\n FROM\n";
+                break;
+            case 5:
+                cout << " STRANGER THINGS\n BLACK MIRROR\n";
+                break;
+        }
     }
 }
 
