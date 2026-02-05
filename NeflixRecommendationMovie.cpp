@@ -248,8 +248,3 @@ int main() {
 }
 
 
-int main(){
-    printf("Hello");
-}
-
-
